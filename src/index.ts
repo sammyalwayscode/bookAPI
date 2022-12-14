@@ -1,8 +1,8 @@
 import express, { Application, Request, Response } from "express";
-import router from "./router/bookRouter";
-const PORT: number | string = process.env.port || 2442;
+import router from "../router/bookRouter";
+const PORT: number | string = process.env.PORT || 2442;
 const app: Application = express();
-require("./config/db");
+require("../config/db");
 app.use(express.json());
 
 app.get("/", (req: Request, res: Response): Response => {
